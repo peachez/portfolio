@@ -7,9 +7,9 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+//import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import firebird from '../images/firebird.jpg';
+//import firebird from '../images/firebird.jpg';
 import engineBlue from '../images/engine-blue.jpg';
 
 

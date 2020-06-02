@@ -1,20 +1,71 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 // import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
+//import white from '@material-ui/core/colors/white';
+
+const fontName = "'Raleway', sans-serif;";
 
 const theme = createMuiTheme({
   palette: {
-    // type: 'dark',
-    primary: { main: '#00264c' }, //purple,
-    secondary: green,
-    // background: { paper: '#005fc1' }
+    primary: {
+      main: '#0e0e0e',
+    },
+
+    text: {
+      primary: '#ffffff',
+    }
   },
-  status: {
-    danger: 'orange',
-  },
-  // typography: {
-  //   fontFamily: ""
-  // }
+  typography: {
+    fontFamily: fontName,
+    fontWeightLight: 200,
+    fontWeightRegular: 400,
+    fontWeightMedium: 600,
+    fontWeightBold: 800,
+    h1: {
+      fontFamily: fontName,
+      fontWeight: 200,
+    },
+    h2: {
+      fontFamily: fontName,
+      fontWeight: 200,
+    },
+    h3: {
+      fontFamily: fontName,
+      fontWeight: 400,
+    },
+    h4: {
+      fontFamily: fontName,
+    },
+    h5: {
+      fontFamily: fontName,
+    },
+    h6: {
+      fontFamily: fontName,
+      fontWeight: 600,
+    },
+    subtitle1: {
+      fontFamily: fontName,
+    },
+    subtitle2: {
+      fontFamily: fontName,
+      fontWeight: 600,
+    },
+    body1: {
+      fontFamily: fontName,
+    },
+    body2: {
+      fontFamily: fontName,
+    },
+    button: {
+      fontFamily: fontName,
+      fontWeight: 600,
+    },
+    caption: {
+      fontFamily: fontName,
+    },
+    overline: {
+      fontFamily: fontName,
+    },
+  }
 });
 
 export default theme;

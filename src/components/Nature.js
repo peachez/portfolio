@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import Box from '@material-ui/core/Box';
+//import Box from '@material-ui/core/Box';
 // import '../scss/parallax.scss'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
