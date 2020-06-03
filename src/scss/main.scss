@@ -8,4 +8,30 @@
 
 body {
   background-color: #0e0e0e; //#005fc1;
+  width: 100vw;
+}
+
+div,
+header,
+section,
+article,
+img {
+  width: 100%;
+}
+
+div {
+  height: 100%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+  body {
+    /** Because of an issue with Chrome dealing with viewport sizing, we need to add special sizes for that browser */
+
+    // equation: y = ((mx + b) / 10) , where x is the current viewport width.
+    //           y = ((1/88)x + (8985/11) / 10)
+    // width: calc(((1 / 88 * 100vw) + 816.818%) / 10); //81vw for 600 width viewport; 79.5vw for 1920 width viewport;
+
+    // Slight adjustment to b for height value
+    // height: 81.8vh; //calc(((1 / 88 * 100vh) + 810%) / 10);
+  }
 }

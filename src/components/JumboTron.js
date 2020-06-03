@@ -18,12 +18,12 @@ export class JumboTron extends React.Component {
   render() {
     // const {props} = this.props; // name, title, url
     return (
-      <div class="jumbotron">
+      <div className={"jumbotron"}>
         <Typography>
-          <span class="name">{this.props.name}</span>
-          <span class="title">{this.props.title}</span>
+          <span className={"name"}>{this.props.name}</span>
+          <span className={"title"}>{this.props.title}</span>
         </Typography>
-        <div class="img">
+        <div className={"img"}>
           <img src={this.props.url} alt={this.props.name} />
         </div>
       </div>

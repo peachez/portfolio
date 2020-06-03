@@ -1,0 +1,25 @@
+$wBreakpoints: (
+  'xs': 0,
+  'sm': 600px,
+  'md': 960px,
+  'lg': 1280px,
+  'xl': 1920px
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($wBreakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($wBreakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available wBreakpoints are: #{map-keys($wBreakpoints)}.";
+  }
+}
+
+// @function

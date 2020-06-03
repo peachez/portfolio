@@ -17,16 +17,14 @@ const useStyles = makeStyles((theme) => ({
     height: 72,
   },
   header: {
-    position: 'fixed',
+    // position: 'fixed',
     width: '100%',
     zIndex: 100,
-    top: 0,
-    left: 0,
+    // top: 0,
+    // left: 0,
   },
   appbar: {
-    boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.2),\
-                 0px 4px 5px 0px rgba(0,0,0,0.14),\
-                 0px 1px 10px 0px rgba(255,255,255,0.12)',
+    boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(255,255,255,0.12)',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -39,26 +37,34 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     width: '100%',
-    display: 'flex',
-    justifyContent: 'flex-end',
+    // display: 'flex',
+    // justifyContent: 'flex-end',
   },
   menuicon: {
     fontSize: 30,
   },
   mainmenu: {
     display: 'flex',
-    width: '50%',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
+    minWidth: '100%',
     alignItems: 'center',
+    // [theme.breakpoints.up('md')]: {
+    //   width: '50%',
+    //   justifyContent: 'flex-end',
+    // }
   },
   mainlink: {
-    minWidth: '200px',
+    // minWidth: '200px',
     textAlign: 'center',
-    padding: '20px',
-    fontSize: '1.2rem',
+    padding: '10px',
+    fontSize: '0.8rem',
     '&:hover': {
       background: 'rgba(255,255,255,0.15)'
-    }
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 'inherit',
+      padding: '20px',
+    },
   }
 }));
 
@@ -79,8 +85,8 @@ export default function HeaderMenu() {
     <div className={classes.container}>
       <div className={classes.header}>
         <AppBar position="static" className={classes.appbar}>
-          <Toolbar className={classes.toolbar}>
-            <Typography align="right" display="block" className={classes.mainmenu}>
+          <Toolbar disableGutters={true} className={classes.toolbar}>
+            <Typography className={classes.mainmenu}>
               <Link className={classes.mainlink} href="/" color="textPrimary" underline="none">Home</Link>
               <Link className={classes.mainlink} href="/store" color="textPrimary" underline="none">Products</Link>
               <Link className={classes.mainlink} href="/#about" color="textPrimary" underline="none">About</Link>
