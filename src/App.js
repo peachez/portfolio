@@ -1,6 +1,5 @@
 import React from 'react';
-import HeaderMenu from "./HeaderMenu";
-//import Nature from "./components/Nature";
+import HeaderMenu from "./components/HeaderMenu";
 import JumboTron from './components/JumboTron';
 import portrait from './images/portrait.png';
 

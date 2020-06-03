@@ -5,8 +5,6 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import theme from "./theme";
 import './scss/main.scss';
 
-
-
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>

@@ -1,22 +1,15 @@
 import React from 'react';
-// import { withStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import '../scss/JumboTron.scss';
 
-// const StyledTypography = withStyles({
-//   root: {
-//     display:'flex',
-//     flexDirection: 'column',
-//     justifyContent: 'center',
-//     alignItems: 'flex-end',
-//     color: '#fff',
-//     paddingRight: '10%',
-//   },
-// })(Typography);
+// const useStyles = makeStyles((theme) => ({
+
+// }));
 
 export class JumboTron extends React.Component {
   render() {
-    // const {props} = this.props; // name, title, url
+    // const classes = useStyles();
     return (
       <div className={"jumbotron"}>
         <Typography>
