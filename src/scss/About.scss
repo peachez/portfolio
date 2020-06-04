@@ -4,7 +4,7 @@
 .about-cont {
   @include flex-type(center, center, column);
   background-color: #cdcdcd;
-  padding: 20px 50px;
+  padding: 20px;
 
   h2 {
     font-size: 3rem;
@@ -15,11 +15,11 @@
 
   @include respond-to('md') {
     align-items: flex-end;
+    padding: 20px 50px;
   }
 
   .content {
-
-    @include respond-to('md') {
+    @include respond-to('sm') {
       @include flex-type(center, center);
     }
 
@@ -38,18 +38,22 @@
     @include respond-to('md') {
       flex: 0 0 33%;
     }
+
+    img {
+      max-width: 300px;
+    }
   }
 
-  .text > * {
+  .basic-info > * {
     margin: 20px 0;
   }
 
   .name-title {
     @include flex-type(center, center, column);
+    margin-top: 0;
 
     @include respond-to('md') {
       align-items: flex-start;
-      margin-top: 0;
     }
 
     * {
@@ -86,24 +90,52 @@
   .contact-loc {
     @include flex-type(space-between, center);
     background-color: #ddd;
-    margin: 10px -10px;
+    margin: 10px 0px;
     padding: 10px;
+
+    @include respond-to('sm') {
+      flex-direction: column;
+    }
 
     @include respond-to('md') {
       max-width: 370px;
-      margin: 10px 0;
+    }
+
+    .social-icons {
+      @include flex-type('', center);
+
+      @include respond-to('sm') {
+        width: unset;
+      }
+
+      & > * {
+        margin-left: 10px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
     }
 
     a {
       @include flex-type(center, center);
     }
-
-    span {
-      font-size: 0.8rem;
-    }
   }
 
-  .overview p {
+  .city-state,
+  .email {
     font-size: 0.8rem;
+  }
+
+  .overview {
+    padding: 0 20px;
+
+    @include respond-to('md') {
+      padding: 0 40px;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
   }
 }

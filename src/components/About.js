@@ -2,6 +2,7 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import '../scss/About.scss';
 
 export class About extends React.Component {
@@ -15,21 +16,25 @@ export class About extends React.Component {
           <div className={"img"}>
             <img src={this.props.url} alt={this.props.name} />
           </div>
-          <div className={"text"}>
-            <Typography className={"name-title"}>
-              <span className={"name"}>{this.props.name}</span>
-              <span className={"title"}>{this.props.title}</span>
-            </Typography>
-              <div className={"contact-loc"}>
+          <div className={"basic-info"}>
+            <div className={"name-title"}>
+              <Typography component="span" className={"name"}>{this.props.name}</Typography>
+              <Typography component="span" className={"title"}>{this.props.title}</Typography>
+            </div>
+            <div className={"contact-loc"}>
+              <div className={"social-icons"}>
                 <Link className={"social linkedin"} href={this.props.social.linkedin}>
                   <LinkedInIcon />
                 </Link>
-                <Typography component="span" className={"email"}>{this.props.email}</Typography>
-                <Typography component="span" className={"city-state"}>{this.props.cityState}</Typography>
+                <Link className={"social github"} href={this.props.social.github}>
+                  <GitHubIcon />
+                </Link>
               </div>
-            <div className={"overview"}>{bodyText}</div>
+              <Typography component="span" className={"email"}>{this.props.email}</Typography>
+            </div>
           </div>
         </div>
+        <div className={"overview"}>{bodyText}</div>
       </div>
     )
   }

@@ -12,7 +12,8 @@ const DATA = {
     "url": aboutMe,
     "title": "Lead Frontend/Backend Web Developer",
     "social": {
-      "linkedin" : "https://www.linkedin.com/in/kevin-seiter-b85bb83b/"
+      "linkedin" : "https://www.linkedin.com/in/kevin-seiter-b85bb83b/",
+      "github": "https://github.com/peachez"
     },
     "cityState": "Las Vegas, NV",
     "bodyText": [
