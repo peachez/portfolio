@@ -7,9 +7,6 @@ import '../scss/About.scss';
 export class About extends React.Component {
   render() {
     const bodyText = this.props.bodyText.map((str) => { return (<Typography paragraph={true} >{str}</Typography>); });
-    // for (let i = 0; i < this.props.bodyText.length; i++) {
-    //   bodyText += <Typography>{this.props.bodyText[i]}</Typography>
-    // }
 
     return (
       <div id={"about"} className={"about-cont"}>
