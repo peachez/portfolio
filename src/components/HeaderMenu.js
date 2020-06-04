@@ -4,7 +4,10 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import MuiLink from '@material-ui/core/Link';
+import { HashLink as Link } from 'react-router-hash-link';
+import { BrowserRouter as Router } from "react-router-dom";
+
 import '../scss/HeaderMenu.scss';
 
 // const useStyles = makeStyles((theme) => ({
@@ -26,16 +29,18 @@ export default function HeaderMenu() {
 
   return (
     <div className={"main-nav-container"}>
-      <AppBar position="static" className={"app-bar"}>
-        <Toolbar disableGutters={true} className={"toolbar"}>
-          <Typography className={"nav-links"}>
-            <Link href="/portfolio" color="textPrimary" underline="none">Home</Link>
-            <Link href="/portfolio/store" color="textPrimary" underline="none">Products</Link>
-            <Link href="/portfolio#about" color="textPrimary" underline="none">About</Link>
-            <Link href="/portfolio#contact" color="textPrimary" underline="none">Contact</Link>
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <Router>
+        <AppBar position="static" className={"app-bar"}>
+          <Toolbar disableGutters={true} className={"toolbar"}>
+            <Typography className={"nav-links"}>
+              <MuiLink href="/portfolio" color="textPrimary" underline="none">Home</MuiLink>
+              <MuiLink href="/portfolio/store" color="textPrimary" underline="none">Products</MuiLink>
+              <Link smooth to="/portfolio#about" className={"MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorTextPrimary"}>About</Link>
+              <Link smooth to="/portfolio#contact" className={"MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorTextPrimary"}>Contact</Link>
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </Router>
     </div>
   );
 }

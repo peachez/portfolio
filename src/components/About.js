@@ -12,7 +12,7 @@ export class About extends React.Component {
     // }
 
     return (
-      <div className={"about-cont"}>
+      <div id={"about"} className={"about-cont"}>
         <Typography variant="h2">About</Typography>
         <div className={"content"}>
           <div className={"img"}>
