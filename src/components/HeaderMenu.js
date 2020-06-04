@@ -29,10 +29,10 @@ export default function HeaderMenu() {
       <AppBar position="static" className={"app-bar"}>
         <Toolbar disableGutters={true} className={"toolbar"}>
           <Typography className={"nav-links"}>
-            <Link href="/" color="textPrimary" underline="none">Home</Link>
-            <Link href="/store" color="textPrimary" underline="none">Products</Link>
-            <Link href="/#about" color="textPrimary" underline="none">About</Link>
-            <Link href="/#contact" color="textPrimary" underline="none">Contact</Link>
+            <Link href="/portfolio" color="textPrimary" underline="none">Home</Link>
+            <Link href="/portfolio/store" color="textPrimary" underline="none">Products</Link>
+            <Link href="/portfolio#about" color="textPrimary" underline="none">About</Link>
+            <Link href="/portfolio#contact" color="textPrimary" underline="none">Contact</Link>
           </Typography>
         </Toolbar>
       </AppBar>

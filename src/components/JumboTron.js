@@ -12,7 +12,7 @@ export class JumboTron extends React.Component {
     // const classes = useStyles();
     return (
       <div className={"jumbotron"}>
-        <Typography>
+        <Typography variant="h1">
           <span className={"name"}>{this.props.name}</span>
           <span className={"title"}>{this.props.title}</span>
         </Typography>
@@ -24,4 +24,4 @@ export class JumboTron extends React.Component {
   }
 }
 
-export default JumboTron
+export default JumboTron;

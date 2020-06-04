@@ -1,0 +1,35 @@
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($wBreakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($wBreakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available wBreakpoints are: #{map-keys($wBreakpoints)}.";
+  }
+}
+
+@mixin flex-type($hAlign: '', $vAlign: '', $dir: row, $wrap: false) {
+  display: flex;
+
+  @if ($hAlign != '') {
+    justify-content: $hAlign;
+  }
+
+  @if ($vAlign != '') {
+    align-items: $vAlign;
+  }
+
+  @if ($dir != row) {
+    flex-direction: $dir;
+  }
+
+  @if ($wrap == true) {
+    flex-wrap: wrap;
+  }
+}

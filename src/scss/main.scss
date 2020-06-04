@@ -5,6 +5,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  transition: 0.25s;
 }
 
 body {
@@ -25,4 +26,8 @@ img {
 
 div {
   height: 100%;
+}
+
+p {
+  margin: 20px 0;
 }
