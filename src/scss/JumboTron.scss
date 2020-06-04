@@ -92,7 +92,7 @@
         margin: 0 10%;
       }
 
-      @media (max-aspect-ratio: 960/641) {
+      @media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 960/641) {
         max-width: 50%;
         margin: 0 25%;
       }
