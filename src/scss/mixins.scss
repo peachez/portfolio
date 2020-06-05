@@ -1,9 +1,21 @@
-@mixin respond-to($breakpoint) {
+@mixin respond-to($breakpoint, $upToBreakpoint: '') {
   // If the key exists in the map
   @if map-has-key($wBreakpoints, $breakpoint) {
-    // Prints a media query based on the value
-    @media (min-width: map-get($wBreakpoints, $breakpoint)) {
-      @content;
+
+    // $mq: "(min-width: " + map-get($wBreakpoints, $breakpoint) + ")";
+    @if (map-has-key($wBreakpoints, $upToBreakpoint)) {
+      // $mq: $mq + " and (max-width: " + calc(map-get($wBreakpoints, $upToBreakpoint) - 1) + ")";
+
+      // Prints a media query based on the value
+      @media (min-width: map-get($wBreakpoints, $breakpoint)) and (max-width: (map-get($wBreakpoints, $upToBreakpoint) - 1)) {
+        @content;
+      }
+    }
+    @else {
+      // Prints a media query based on the value
+      @media (min-width: map-get($wBreakpoints, $breakpoint)) {
+        @content;
+      }
     }
   }
 
